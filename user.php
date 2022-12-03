@@ -9,6 +9,12 @@ if(!isset($_SESSION['id_user'])){
       <button type='button' onclick=location.href='./'>Back</button>");
 }
 
+if($_SESSION['Role']!="user"){
+  die("<b>Oops!</b> Access Failed.
+      <p>Anda Bukan Pegawai.</p>
+      <button type='button' onclick=location.href='./'>Back</button>");
+}
+
 
 include "library/config.php";
 
